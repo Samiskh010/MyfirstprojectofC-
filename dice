@@ -1,0 +1,44 @@
+#include <cstdlib>
+#include <ctime>
+#define randomize () (srand (time (0)))
+#define
+random (x) (rand() %x)
+#include <conio.h>
+#include <iostream>
+using namespace std;
+void main()
+{
+    cout<<"Press Enter for roll the dice and press Esc for exit.";
+    int n=1;
+    do {
+        char ch=getch();
+        if (ch==13)
+        {
+            system("cls");
+            randomize();
+            switch(random(6)+1)
+            {
+                case 1:
+                    cout<<n++<<"- The dice is 1.";
+                    break;
+                case 2:
+                    cout<<n++<<"- The dice is 2.";
+                    break;
+                case 3:
+                    cout<<n++<<"- The dice is 3.";
+                    break;
+                case 4:
+                    cout<<n++<<"- The dice is 4.";
+                    break;
+                case 5:
+                    cout<<n++<<"- The dice is 5.";
+                    break;
+                default
+                    cout<<n++<<"- The dice is 6.";
+            }
+        } 
+        else if (ch==27)
+            break; 
+    } while (1);
+}
+
